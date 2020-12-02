@@ -1,8 +1,10 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
+import PropTypes from 'prop-types';
 
 import "./Post.scss";
-const Post = ({ title, author, date, id }) => {
+
+const Post = React.memo(({ title, author, date, id }) => {
   const history = useHistory();
   date = new Date(date).toLocaleString();
 
@@ -20,6 +22,19 @@ const Post = ({ title, author, date, id }) => {
       </div>
     </div>
   );
-};
+});
+
+Post.propTypes = {
+  title: PropTypes.string.isRequired,
+  author: PropTypes.string.isRequired,
+  date: PropTypes.number.isRequired,
+  id: PropTypes.string.isRequired,
+}
+
+Post.defaultProps = {
+  title: "title",
+  author: "author",
+  date: "--.--.--, --:--:--",
+}
 
 export default Post;

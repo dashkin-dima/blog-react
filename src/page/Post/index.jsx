@@ -18,7 +18,11 @@ const PostPage = (props) => {
   const createContentMarkup = () => {
     return { __html: post.content };
   };
-  const date = new Date(post.date).toLocaleString();
+
+  let date;
+  if (post) {
+    date = new Date(post.date).toLocaleString();
+  }
 
   const goToHomePage = () => {
     history.push("/");
@@ -28,23 +32,30 @@ const PostPage = (props) => {
     dispatch(deletePost(post.id));
     history.push("/");
   };
+
   return (
     <div className="post-page">
-      <Header title={post.title} />
-      <div className="post-page__content">
-        <div dangerouslySetInnerHTML={createContentMarkup()} />
-        <div className="post-page__author">автор: {post.author}</div>
-        <div className="post-page__date">{date}</div>
-        <div className="post-page__button" onClick={goToHomePage}>
-          на главную
-        </div>
-        <div
-          className="post-page__button post-page__button--remove"
-          onClick={removePost}
-        >
-          удалить
-        </div>
-      </div>
+      {post ? (
+        <React.Fragment>
+          <Header title={post.title} />
+          <div className="post-page__content">
+            <div dangerouslySetInnerHTML={createContentMarkup()} />
+            <div className="post-page__author">автор: {post.author}</div>
+            <div className="post-page__date">{date}</div>
+            <div className="post-page__button" onClick={goToHomePage}>
+              на главную
+            </div>
+            <div
+              className="post-page__button post-page__button--remove"
+              onClick={removePost}
+            >
+              удалить
+            </div>
+          </div>
+        </React.Fragment>
+      ) : (
+        <div className="post-page__plug" onClick={goToHomePage}>такого поста нет</div>
+      )}
     </div>
   );
 };

@@ -18,7 +18,7 @@ const HomePage = () => {
       <Header title="записи" />
       <div className="home-page__content">
         {posts.length ? (
-          posts.map((post) => <Post {...post} />)
+          posts.map((post) => <Post key={post.id} {...post} />)
         ) : (
           <div className="home-page__plug">записей нет</div>
         )}

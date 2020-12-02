@@ -6,28 +6,41 @@
   &__date {
     font-size: 15px;
   }
-  
+
   &__button {
     display: inline-block;
     margin-right: 15px;
     margin-top: 10px;
     padding: 6px 12px;
     border-radius: 3px;
-    
+
     background-color: #88c9dd;
     color: #fff;
 
     cursor: pointer;
 
     &:hover {
-      background-color:  #77d0eb;
+      background-color: #77d0eb;
     }
   }
 
   &__button--remove {
     background-color: #c72e2e;
     &:hover {
-      background-color:  #e21f1f;
+      background-color: #e21f1f;
     }
+  }
+
+  &__plug {
+    padding: 15px;
+    margin-bottom: 5px;
+
+    border-radius: 5px;
+    background-color: #b6cbed;
+    color: #fff;
+
+    text-align: center;
+    font-size: 30px;
+    cursor: pointer;
   }
 }
