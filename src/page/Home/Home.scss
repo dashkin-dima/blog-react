@@ -1,0 +1,33 @@
+.home-page {
+  &__content {
+    padding: 15px;
+  }
+
+  &__plug {
+    padding: 15px;
+    margin-bottom: 5px;
+
+    border-radius: 5px;
+    background-color: #b6cbed;
+    color: #fff;
+    
+    text-align: center;
+    font-size: 30px;
+  }
+
+  &__button {
+    width: 165px;
+    margin-right: 10px;
+    padding: 6px 12px;
+    border-radius: 3px;
+    
+    background-color: #88c9dd;
+    color: #fff;
+
+    cursor: pointer;
+
+    &:hover {
+      background-color:  #77d0eb;
+    }
+  }
+}

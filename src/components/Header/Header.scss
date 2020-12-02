@@ -1,0 +1,19 @@
+.header {
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+
+  background-color: #73a6e0;
+
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+
+  &__title {
+    display: inline-block;
+    margin: 1rem auto;
+
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 25px;
+  }
+}

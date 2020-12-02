@@ -1,0 +1,56 @@
+.add-post-page {
+  &__content {
+    padding: 15px;
+  }
+
+  &__input-form {
+    display: flex;
+    margin-bottom: 6px;
+    justify-content: space-between;
+  }
+
+  &__input {
+    width: 50%;
+  }
+
+  &__editor-content {
+    background-color: #f8f9fa;
+    border: 1px solid #e1ecf2;
+  }  
+
+  &__buttons {
+    margin-top: 10px;
+    display: flex;
+  }  
+
+  &__button {
+    margin-right: 10px;
+    padding: 6px 12px;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+
+  &__button--submit {
+    background-color: #5aac44;
+    color: #fff;
+    &:hover {
+      background-color:  #6acc4f;
+    }
+  }
+
+  &__button--clear {
+    background-color: #88c9dd;
+    color: #fff;
+    &:hover {
+      background-color:  #77d0eb;
+    }
+  }
+
+  &__button--cancel {
+    background-color: #c72e2e;
+    color: #fff;
+    &:hover {
+      background-color:  #e21f1f;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+.post {
+  display: flex;
+  padding: 10px 0;
+  justify-content: space-between;
+
+  &__title {
+    line-height: 20px;
+    font-size: 25px;
+
+    cursor: pointer;
+
+    &:hover {
+      color: #73a6e0;
+    }
+  }
+
+  &__date {
+    font-size: 15px;
+    text-align: end;
+  }
+}
