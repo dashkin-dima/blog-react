@@ -2,8 +2,9 @@ import React from "react";
 import { useHistory } from 'react-router-dom';
 import { useSelector } from "react-redux";
 
-import "./Home.scss";
 import { Header, Post } from "../../components";
+
+import "./Home.scss";
 
 const HomePage = () => {
   const history = useHistory();

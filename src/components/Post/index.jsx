@@ -26,7 +26,7 @@ const Post = React.memo(({ title, author, date, id }) => {
 
 Post.propTypes = {
   title: PropTypes.string.isRequired,
-  author: PropTypes.string.isRequired,
+  author: PropTypes.string,
   date: PropTypes.number.isRequired,
   id: PropTypes.string.isRequired,
 }

@@ -1,8 +1,9 @@
 import React from "react";
 import { Route } from "react-router-dom";
 
-import "./App.scss";
 import { AddPostPage, HomePage, PostPage } from "./page";
+
+import "./App.scss";
 
 const App = () => {
   return (

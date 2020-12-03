@@ -7,6 +7,7 @@
     display: flex;
     margin-bottom: 6px;
     justify-content: space-between;
+    position: relative;
   }
 
   &__input {
@@ -16,12 +17,43 @@
   &__editor-content {
     background-color: #f8f9fa;
     border: 1px solid #e1ecf2;
-  }  
+  }
+
+  &__author-search {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    left: 50%;
+    padding: 10px 10px;
+    margin-top: 30px;
+    width: 160px;
+    z-index: 9999;
+
+    background: #ffffff;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.09);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: visibility 0.2s, opacity 0.2s linear;
+  }
+
+  &__input--author:focus + &__author-search,
+  &__author-search:hover {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &__author-search-item {
+    cursor: pointer;
+
+    &:hover {
+      color: #73a6e0;
+    }
+  }
 
   &__buttons {
     margin-top: 10px;
     display: flex;
-  }  
+  }
 
   &__button {
     margin-right: 10px;
@@ -34,7 +66,7 @@
     background-color: #5aac44;
     color: #fff;
     &:hover {
-      background-color:  #6acc4f;
+      background-color: #6acc4f;
     }
   }
 
@@ -42,7 +74,7 @@
     background-color: #88c9dd;
     color: #fff;
     &:hover {
-      background-color:  #77d0eb;
+      background-color: #77d0eb;
     }
   }
 
@@ -50,7 +82,7 @@
     background-color: #c72e2e;
     color: #fff;
     &:hover {
-      background-color:  #e21f1f;
+      background-color: #e21f1f;
     }
   }
 }
